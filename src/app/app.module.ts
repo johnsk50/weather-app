@@ -17,13 +17,15 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatSelectModule } from '@angular/material/select';
+import { CityWeatherComponent } from './city-weather/city-weather.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     LayoutComponent,
-    DashboardComponent
+    DashboardComponent,
+    CityWeatherComponent
   ],
   imports: [
     BrowserModule,

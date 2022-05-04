@@ -1,0 +1,9 @@
+<div class="weather" *ngIf="weatherInfo">
+    <div class="weather-city">{{weatherInfo.city}}</div>
+    <div class="weather-temp">        
+        <span>{{weatherInfo.temperature}} °C</span>
+        <small class="weather-temp-real">(Real Feel: {{weatherInfo.feelsLike}} °C)</small>
+    </div>
+    <div class="weather-description">{{weatherInfo.description | titlecase }}</div>
+    <mat-icon class="weather-icon" title="{{weatherInfo.description}}" aria-hidden="false" aria-label="Example home icon"><img [src]="weatherInfo.iconUrl" [alt]="weatherInfo.description"></mat-icon>
+</div>

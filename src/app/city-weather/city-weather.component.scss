@@ -1,0 +1,24 @@
+
+:host {
+    display: flex;
+    flex: 1;
+}
+
+.weather {
+    display: flex;
+    flex: 1;
+
+    :not(:last-child) {
+        flex: 1;
+    }
+
+    &-icon {
+        img {
+            height: inherit;
+        }
+    }
+}
+
+.weather-temp-real {
+    padding-left: 2px;
+}
