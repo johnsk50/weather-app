@@ -8,10 +8,6 @@
     display: flex;
     flex: 1;
 
-    :not(:last-child) {
-        flex: 1;
-    }
-
     &-icon {
         img {
             height: inherit;
@@ -21,4 +17,13 @@
 
 .weather-temp-real {
     padding-left: 2px;
+}
+
+.weather-city-fav {
+    color: rgb(155, 154, 150);
+    cursor: pointer;
+
+    &.favorite {
+        color: rgb(221, 170, 43);
+    }
 }

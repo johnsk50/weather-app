@@ -1,9 +1,10 @@
 <div class="weather" *ngIf="weatherInfo">
-    <div class="weather-city">{{weatherInfo.city}}</div>
-    <div class="weather-temp">        
+    <mat-icon class="weather-city-fav" [ngClass]="{'favorite': isFavorite}" (click)="toggleFavorite()">star</mat-icon>
+    <div class="weather-city flex-1">{{weatherInfo.city}}</div>
+    <div class="weather-temp flex-1">        
         <span>{{weatherInfo.temperature}} °C</span>
         <small class="weather-temp-real">(Real Feel: {{weatherInfo.feelsLike}} °C)</small>
     </div>
-    <div class="weather-description">{{weatherInfo.description | titlecase }}</div>
-    <mat-icon class="weather-icon" title="{{weatherInfo.description}}" aria-hidden="false" aria-label="Example home icon"><img [src]="weatherInfo.iconUrl" [alt]="weatherInfo.description"></mat-icon>
+    <div class="weather-description flex-1">{{weatherInfo.description | titlecase }}</div>
+    <mat-icon class="weather-icon" title="{{weatherInfo.description | titlecase}}"><img [src]="weatherInfo.iconUrl" [alt]="weatherInfo.description"></mat-icon>
 </div>
